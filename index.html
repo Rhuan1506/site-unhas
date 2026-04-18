@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FLAVIA SOUZA</title>
+    <title>Flavia Souza | Manicure & Nail Designer</title>
 
     <style>
         body {
@@ -56,6 +56,7 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            text-align: center;
         }
 
         footer{
@@ -65,12 +66,97 @@
             padding: 10px;
             margin-top: 20px;
         }
+
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 10px rgba(0,0,0,0,2);
+        }
+
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: center;
+        }
+
+td, th {
+    padding: 12px;
+    border: 1px solid   #ddd;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #ff69b4;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+}
+
+.titulo {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-weight: 600;
+    font-size: 28px;
+    color: #ff69b4;
+    margin-bottom: 10px;
+    position: relative;
+}   
+
+.subtitulo {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #888;
+    letter-spacing: 2px;
+    margin-top: -10px;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    color: #ff69b4;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+
+
     </style>
 </head>
 <body>
     <header>
         <h1>FLAVIA SOUZA</h1>
-        <p>ESPECIALISTA EM UNHAS</p>
+       <p class="subtitulo">ESPECIALISTA EM UNHAS</p>
     </header>
 
     <section>
@@ -81,26 +167,85 @@
                 <p>Cuidado Completo para as Unhas</p>
             </div>
 
+
+
 <div class="card">
     <h3>Alongamentos</h3>
     <p>Unhas grandes e Elegantes</p>
-</div>
-
-<a class="botao" href="#">Agendar Hoarario</a>
-</div>
     </section>
 <section>
-    <h2>GALERIA DE TRABALHOS</h2>
-    <div class="Galeria">
-        <img src="img/unha1.jpg" alt="unha decorada">
-        <img src="img/unha2.jpg" alt="unha decorada">
-        <img src="img/unha3.jpg" alt="unha decorada">
-    </div>
+
 </section>
 
 
+
+
+<a class="whatsapp" href="https://wa.me/(11) 96826-0524" target="_blank">
+💬 Falar no WhatsApp
+</a>
+
+
+
+
+<h2 class="titulo">Preços</h2>
+
+<table>
+  <tr>
+    <th>Serviço</th>
+    <th>Valor</th>
+  </tr>
+
+
+<tr>
+    <td>Alongamento no molde F1</td>
+    <td>R$ 100</td>
+  </tr>
+  
+  <tr>
+    <td>Manutenção</td>
+    <td>R$ 80</td>
+  </tr>
+  <tr>
+    <td>Banho de Gel</td>
+    <td>R$ 75</td>
+  </tr>
+
+ <tr>
+    <td>Blindagem</td>
+    <td>R$ 50</td>
+  </tr>
+
+   <tr>
+    <td>Esmalatação em Gel</td>
+    <td>R$ 40</td>
+  </tr>
+  <tr>
+    <td>Remoção</td>
+    <td>R$ 20</td>
+  </tr>
+
+   <tr>
+    <td>Reposiçao de Unha</td>
+    <td>R$ 10</td>
+  </tr>
+
+</table>
+
+
+
+<h2 class="titulo">Agende seu horário</h2>
+
+<form>
+  <input type="text" placeholder="Seu nome" required>
+  <input type="tel" placeholder="Seu telefone" required>
+  <input type="date" required>
+
+  <button type="submit">Enviar</button>
+</form>
+
+
     <footer>
-        <p>Conatato: (11) 96826-0524</p>
+        <p>Contato: (11) 96826-0524</p>
     </footer>
 </body>
 </html>
