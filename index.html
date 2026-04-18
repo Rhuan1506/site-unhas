@@ -1,251 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flavia Souza | Manicure & Nail Designer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flavia Souza | Manicure & Nail Designer</title>
 
-    <style>
-        body {
-                margin: 0;
-                font-family: Arial, Helvetica, sans-serif;
-                background: #fff0f5;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-        header {
-            background: #ff69b4;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-        }
+<style>
 
-        section {
-            padding: 20px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-        }
-
-        .serviços {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            text-align: center;
-            max-width: 800PX;
-            margin: 0 auto;  
-            
-        }
-
-        .card{
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: 200px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
-        }
-
-        .botao {    
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: #ff69b4;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            text-align: center;
-        }
-
-        footer{
-            background: beige;
-            color: black;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-
-        .whatsapp {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 5px 10px rgba(0,0,0,0,2);
-        }
-
-        table {
-            margin: 0 auto;
-            border-collapse: collapse;
-            background: white;
-            border-radius: 10px;
-            overflow: center;
-        }
-
-td, th {
-    padding: 12px;
-    border: 1px solid   #ddd;
-    text-align: center;
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f5;
 }
 
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #e91e63, #ff4081);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.subtitulo {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* PADRÃO DE BLOCO (CARDS) */
+.bloco {
+  background: white;
+  margin: 20px auto;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.bloco h2 {
+  color: #e91e63;
+  margin-bottom: 10px;
+}
+
+/* SERVIÇOS */
+.card {
+  background: #fafafa;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* BOTÃO */
+button {
+  background: #e91e63;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* AVALIAÇÕES */
+.avaliacao {
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.clicavel {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.clicavel:hover {
+  transform: scale(1.03);
+}
+
+.clicavel:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.clicavel:active {
+  background: #ffe4ec;
+}
+
+/* TABELA */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* FORM */
 form {
-    display: flex;
-    flex-direction: column;
-    width: 250px;
-    margin: 0 auto;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 input {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
-button {
-    background: #ff69b4;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* WHATSAPP */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  font-size: 24px;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
 }
 
-h2 {
-    text-align: center;
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
 }
 
-.titulo {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    font-weight: 600;
-    font-size: 28px;
-    color: #ff69b4;
-    margin-bottom: 10px;
-    position: relative;
-}   
-
-.subtitulo {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    color: #888;
-    letter-spacing: 2px;
-    margin-top: -10px;
-}
-
-h2 {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    color: #ff69b4;
-    font-size: 28px;
-    font-weight: 600;
-    margin: 20px 0;
-}
-
-
-
-    </style>
+</style>
 </head>
+
 <body>
-    <header>
-        <h1>FLAVIA SOUZA</h1>
-       <p class="subtitulo">ESPECIALISTA EM UNHAS</p>
-    </header>
 
-    <section>
-        <h2>NOSSOS SERVIÇOS</h2>
-        <div class="serviços">
-            <div class="card">
-                <h3>Manicure</h3>
-                <p>Cuidado Completo para as Unhas</p>
-            </div>
+<header>
+  <h1>FLAVIA SOUZA</h1>
+  <p class="subtitulo">ESPECIALISTA EM UNHAS</p>
+</header>
 
+<!-- SERVIÇOS -->
+<section class="bloco">
+  <h2>Serviços</h2>
 
+  <div class="card">
+    <h3>Manicure</h3>
+    <p>Cuidado completo para as unhas</p>
+  </div>
 
-<div class="card">
-    <h3>Alongamentos</h3>
-    <p>Unhas grandes e Elegantes</p>
-    </section>
-<section>
+  <div class="card">
+    <h3>Alongamento</h3>
+    <p>Unhas grandes e elegantes</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="bloco">
+  <h2>Garanta seu horário</h2>
+  <p>Atendimento com horários limitados</p>
+  <a href="https://wa.me/55119968260524" target="_blank">
+    <button>Agendar agora</button>
+  </a>
+</section>
+
+<!-- LOCALIZAÇÃO -->
+<section class="bloco">
+  <h2>Localização</h2>
+  <p>Atendimento em Diadema - SP</p>
+</section>
+
+<!-- AVALIAÇÕES -->
+<section class="bloco">
+  <h2>Clientes satisfeitas</h2>
+
+  <div class="avaliacao clicavel">
+    ⭐⭐⭐⭐⭐
+    <p>"Simplesmente perfeito!"</p>
+  </div>
+
+  <div class="avaliacao clicavel">
+    ⭐⭐⭐⭐⭐
+    <p>"Melhor manicure que já fui"</p>
+  </div>
+</section>
+
+<!-- PREÇOS -->
+<section class="bloco">
+  <h2>Preços</h2>
+
+  <table>
+    <tr><td>Alongamento no molde F1</td><td>R$ 100</td></tr>
+    <tr><td>Manutenção</td><td>R$ 80</td></tr>
+    <tr><td>Banho de Gel</td><td>R$ 75</td></tr>
+    <tr><td>Blindagem</td><td>R$ 50</td></tr>
+    <tr><td>Esmaltação em Gel</td><td>R$ 40</td></tr>
+    <tr><td>Remoção</td><td>R$ 20</td></tr>
+    <tr><td>Reposição</td><td>R$ 10</td></tr>
+  </table>
 
 </section>
 
+<!-- FORM -->
+<section class="bloco">
+  <h2>Agende seu horário</h2>
 
+  <form>
+    <input type="text" placeholder="Seu nome" required>
+    <input type="tel" placeholder="Seu telefone" required>
+    <input type="date" required>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
 
+<!-- WHATSAPP -->
+<a href="https://wa.me/55119968260524" class="whatsapp">💬</a>
 
-<a class="whatsapp" href="https://wa.me/(11) 96826-0524" target="_blank">
-💬 Falar no WhatsApp
-</a>
+<footer>
+  <p>Contato: (11) 96826-0524</p>
+</footer>
 
-
-
-
-<h2 class="titulo">Preços</h2>
-
-<table>
-  <tr>
-    <th>Serviço</th>
-    <th>Valor</th>
-  </tr>
-
-
-<tr>
-    <td>Alongamento no molde F1</td>
-    <td>R$ 100</td>
-  </tr>
-  
-  <tr>
-    <td>Manutenção</td>
-    <td>R$ 80</td>
-  </tr>
-  <tr>
-    <td>Banho de Gel</td>
-    <td>R$ 75</td>
-  </tr>
-
- <tr>
-    <td>Blindagem</td>
-    <td>R$ 50</td>
-  </tr>
-
-   <tr>
-    <td>Esmalatação em Gel</td>
-    <td>R$ 40</td>
-  </tr>
-  <tr>
-    <td>Remoção</td>
-    <td>R$ 20</td>
-  </tr>
-
-   <tr>
-    <td>Reposiçao de Unha</td>
-    <td>R$ 10</td>
-  </tr>
-
-</table>
-
-
-
-<h2 class="titulo">Agende seu horário</h2>
-
-<form>
-  <input type="text" placeholder="Seu nome" required>
-  <input type="tel" placeholder="Seu telefone" required>
-  <input type="date" required>
-
-  <button type="submit">Enviar</button>
-</form>
-
-
-    <footer>
-        <p>Contato: (11) 96826-0524</p>
-    </footer>
 </body>
 </html>
