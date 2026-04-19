@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Flavia Souza | Manicure & Nail Designer</title>
+<title>Flavia Souza | Nail & Designer</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -12,99 +12,167 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #f5f5f5;
+  background: linear-gradient(135deg, #ffe4ec, #f5f5f5);
 }
 
 /* HEADER */
 header {
   background: linear-gradient(135deg, #e91e63, #ff4081);
-  color: white;
   text-align: center;
   padding: 40px 20px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
 
-header h1 {
+/* LOGO */
+.logo {
+  width: 180px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+/* SUB */
+.subtitulo {
+  color: white;
+  font-size: 14px;
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* SERVIÇOS */
+.servicos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 por linha */
+  gap: 15px;
+}
+  
+
+.card {
+  flex: 1;
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.03);
+}
+
+.card h3 {
   margin: 0;
 }
 
-.subtitulo {
-  font-size: 14px;
-  opacity: 0.8;
+.card p {
+  font-size: 13px;
+  color: #666;
 }
 
-/* PADRÃO DE BLOCO (CARDS) */
+.preco {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #e91e63;
+}
+
+
+.destaque {
+  border: 2px solid #e91e63;
+}
+
+.destaque::after {
+  content: "Mais pedido";
+  position: absolute;
+  top: -10px;
+  right: 10px;
+  background: #e91e63;
+  color: white;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 10px;
+}
+
+/* CARD */
 .bloco {
-  background: white;
-  margin: 20px auto;
-  padding: 25px;
-  width: 90%;
-  max-width: 400px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  width: 600px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.bloco:hover {
+  transform: translateY(-5px);
 }
 
 .bloco h2 {
   color: #e91e63;
-  margin-bottom: 10px;
 }
 
-/* SERVIÇOS */
+/* CARD INTERNO */
 .card {
-  background: #fafafa;
-  padding: 15px;
-  border-radius: 10px;
-  margin-top: 10px;
-}
-
-/* BOTÃO */
-button {
-  background: #e91e63;
-  color: white;
-  border: none;
+  background: white;
   padding: 12px;
-  border-radius: 20px;
-  cursor: pointer;
-  width: 100%;
-}
-
-/* AVALIAÇÕES */
-.avaliacao {
-  background: #f9f9f9;
-  padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
-}
-
-.clicavel {
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.clicavel:hover {
-  transform: scale(1.03);
-}
-
-.clicavel:active {
-  transform: scale(0.97);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
-
-.clicavel:active {
-  background: #ffe4ec;
 }
 
 /* TABELA */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 10px;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 300px 600px rgba(0,0,0,0.08);
+  font-size: 14px;
+}
+
+/* cabeçalho (se quiser adicionar depois) */
+table thead {
+  background: linear-gradient(135deg, #e91e63, #ff4081);
+  color: white;
 }
 
 td {
-  padding: 10px;
-  border-bottom: 1px solid #ddd;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f1f1;
+  transition: 0.2s;
+}
+
+/* efeito hover mais bonito */
+tr:hover td {
+  background: #ffe4ec;
+  transform: scale(1.01);
+}
+
+/* preço */
+td:last-child {
+  text-align: right;
+  color: #e91e63;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* zebra (linhas alternadas) */
+tr:nth-child(even) td {
+  background: #fafafa;
+}
+
+/* remove linha da última */
+tr:last-child td {
+  border-bottom: none;
 }
 
 /* FORM */
@@ -114,10 +182,27 @@ form {
   gap: 10px;
 }
 
-input {
+input, select {
   padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+
+/* BOTÃO */
+button {
+  background: linear-gradient(135deg, #e91e63, #ff4081);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(233,30,99,0.4);
 }
 
 /* WHATSAPP */
@@ -127,7 +212,7 @@ input {
   right: 20px;
   background: #25D366;
   color: white;
-  font-size: 24px;
+  font-size: 26px;
   padding: 15px;
   border-radius: 50%;
   text-decoration: none;
@@ -136,6 +221,7 @@ input {
 /* FOOTER */
 footer {
   text-align: center;
+  color: #ff4081;
   padding: 20px;
 }
 
@@ -145,89 +231,214 @@ footer {
 <body>
 
 <header>
-  <h1>FLAVIA SOUZA</h1>
-  <p class="subtitulo">ESPECIALISTA EM UNHAS</p>
+  <img src="logo.png" class="logo" alt="Flavia Souza">
+  <p class="subtitulo">Especialista em unhas</p>
 </header>
+
+<div class="container">
 
 <!-- SERVIÇOS -->
 <section class="bloco">
-  <h2>Serviços</h2>
+  <h2>✨ SERVIÇOS</h2>
 
-  <div class="card">
-    <h3>Manicure</h3>
-    <p>Cuidado completo para as unhas</p>
-  </div>
+  <div class="servicos">
 
-  <div class="card">
-    <h3>Alongamento</h3>
-    <p>Unhas grandes e elegantes</p>
+    <div class="card" onclick="selecionarServico('Alongamento Molde F1')">
+      <h3>💅 Alongamento F1</h3>
+      <p>Unhas longas e elegantes</p>
+      <button onclick="event.stopPropagation(); selecionarServico('Alongamento Molde F1')">
+        Agendar
+      </button>
+    </div>
+
+    <div class="card destaque" onclick="selecionarServico('Manutenção')">
+      <h3>🔥 Manutenção</h3>
+      <p>Cuidado completo das unhas</p>
+      <button onclick="event.stopPropagation(); selecionarServico('Manutenção')">
+        Agendar
+      </button>
+    </div>
+
+    <div class="card" onclick="selecionarServico('Banho de Gel')">
+      <h3>✨ Banho de Gel</h3>
+      <p>Brilho e proteção duradoura</p>
+      <button onclick="event.stopPropagation(); selecionarServico('Banho de Gel')">
+        Agendar
+      </button>
+    </div>
+
+    <div class="card" onclick="selecionarServico('Blindagem')">
+      <h3>🛡️ Blindagem</h3>
+      <p>Fortalecimento das unhas</p>
+      <button onclick="event.stopPropagation(); selecionarServico('Blindagem')">
+        Agendar
+      </button>
+    </div>
+
+    <div class="card" onclick="selecionarServico('Esmaltação em Gel')">
+      <h3>💖 Esmaltação em Gel</h3>
+      <p>Acabamento perfeito e duradouro</p>
+      <button onclick="event.stopPropagation(); selecionarServico('Esmaltação em Gel')">
+        Agendar
+      </button>
+    </div>
+
+    <div class="card" onclick="selecionarServico('Remoção')">
+      <h3>🧼 Remoção</h3>
+      <p>Remoção segura sem danos</p>
+      <button onclick="event.stopPropagation(); selecionarServico('Remoção')">
+        Agendar
+      </button>
+    </div>
+
+    <div class="card" onclick="selecionarServico('Reposição de Unha')">
+      <h3>🔧 Reposição</h3>
+      <p>Correção de unha quebrada</p>
+      <button onclick="event.stopPropagation(); selecionarServico('Reposição de Unha')">
+        Agendar
+      </button>
+    </div>
+
   </div>
 </section>
+</section>
 
-<!-- CTA -->
+
+
+<!-- PREÇOS -->
 <section class="bloco">
-  <h2>Garanta seu horário</h2>
-  <p>Atendimento com horários limitados</p>
-  <a href="https://wa.me/55119968260524" target="_blank">
-    <button>Agendar agora</button>
-  </a>
+  <h2>💲PREÇOS</h2>
+
+  <table>
+    <tr><td>Alongamento F1</td><td>R$ 100,00</td></tr>
+    <tr><td>Manutenção</td><td>R$ 80,00</td></tr>
+    <tr><td>Banho de Gel</td><td>R$ 75,00</td></tr>
+    <tr><td>Blindagem</td><td>R$ 50,00</td></tr>
+    <tr><td>Esmaltação em Gel</td><td>R$ 40,00</td></tr>
+    <tr><td>Remoção</td><td>R$ 20,00</td></tr>
+    <tr><td>Reposição</td><td>R$ 10,00</td></tr>
+  </table>
 </section>
 
 <!-- LOCALIZAÇÃO -->
 <section class="bloco">
-  <h2>Localização</h2>
-  <p>Atendimento em Diadema - SP</p>
+  <h2>📍 LOCALIZAÇÃO</h2>
+
+  <p><strong>Rua Bandeirantes, 99</strong></p>
+
+  <iframe 
+    src="https://www.google.com/maps?q=Diadema+SP&output=embed"
+    width="100%" height="150"
+    style="border:0; border-radius:10px;">
+  </iframe>
+
+  <p>🕒 De Seg a Sex - A partir das 17h</p>
+
+  <a href="https://www.google.com/maps?q=Rua+Bandeirantes+99" target="_blank">
+    <button>Como chegar</button>
+  </a>
 </section>
 
-<!-- AVALIAÇÕES -->
-<section class="bloco">
-  <h2>Clientes satisfeitas</h2>
-
-  <div class="avaliacao clicavel">
-    ⭐⭐⭐⭐⭐
-    <p>"Simplesmente perfeito!"</p>
-  </div>
-
-  <div class="avaliacao clicavel">
-    ⭐⭐⭐⭐⭐
-    <p>"Melhor manicure que já fui"</p>
-  </div>
-</section>
-
-<!-- PREÇOS -->
-<section class="bloco">
-  <h2>Preços</h2>
-
-  <table>
-    <tr><td>Alongamento no molde F1</td><td>R$ 100</td></tr>
-    <tr><td>Manutenção</td><td>R$ 80</td></tr>
-    <tr><td>Banho de Gel</td><td>R$ 75</td></tr>
-    <tr><td>Blindagem</td><td>R$ 50</td></tr>
-    <tr><td>Esmaltação em Gel</td><td>R$ 40</td></tr>
-    <tr><td>Remoção</td><td>R$ 20</td></tr>
-    <tr><td>Reposição</td><td>R$ 10</td></tr>
-  </table>
-
-</section>
 
 <!-- FORM -->
 <section class="bloco">
-  <h2>Agende seu horário</h2>
+  <h2>📅 AGENDAR SEU DIA E SEU HORARIO</h2>
 
-  <form>
-    <input type="text" placeholder="Seu nome" required>
-    <input type="tel" placeholder="Seu telefone" required>
-    <input type="date" required>
-    <button type="submit">Enviar</button>
+  <form onsubmit="enviarWhats(event)">
+
+    <input type="text" id="nome" placeholder="Seu nome" required>
+    <input type="tel" id="telefone" placeholder="Seu telefone" required>
+
+    <select id="servico" required>
+      <option value="">Escolha o serviço</option>
+      <option>Alongamento Molde F1</option>
+      <option>Manutenção</option>
+      <option>Banho de Gel</option>
+      <option>Blindagem</option>
+      <option>Esmaltação em gel</option>
+      <option>Remoção</option>
+      <option>Reposição de Unha</option>
+    </select>
+
+    <input type="date" id="data" required>
+    <select id="hora" required>
+  <option value="">Escolha o horário</option>
+  <script>
+    function gerarHorarios() {
+  let select = document.getElementById("hora");
+
+  let inicio = 17; // 17:00
+  let fim = 22;    // 19:00
+
+  for (let h = inicio; h <= fim; h++) {
+    for (let m = 0; m < 60; m += 30) {
+
+      let hora = h.toString().padStart(2, "0");
+      let minuto = m.toString().padStart(2, "0");
+
+      let horario = `${hora}:${minuto}`;
+
+      let option = document.createElement("option");
+      option.value = horario;
+      option.textContent = horario;
+
+      select.appendChild(option);
+    }
+  }
+}
+
+gerarHorarios();
+
+
+  </script>
+</select>
+
+    <button type="submit">Agendar pelo WhatsApp</button>
+
   </form>
 </section>
 
-<!-- WHATSAPP -->
-<a href="https://wa.me/55119968260524" class="whatsapp">💬</a>
+
+<a href="https://wa.me/5511958561282" class="whatsapp">💬</a>
+
+<script>
+function enviarWhats(event) {
+  event.preventDefault();
+
+  let nome = document.getElementById("nome").value.trim();
+  let telefone = document.getElementById("telefone").value.trim();
+  let servico = document.getElementById("servico").value;
+  let data = document.getElementById("data").value;
+  let hora = document.getElementById("hora").value;
+
+  if (!nome || !telefone || !servico || !data || !hora) {
+    alert("Preencha todos os campos!");
+    return;
+  }
+
+  let dataFormatada = new Date(data).toLocaleDateString("pt-BR");
+
+  let mensagem =
+  `💅 *AGENDAMENTO* %0A%0A` +
+  `👤 Nome: ${nome} %0A` +
+  `📞 Telefone: ${telefone} %0A` +
+  `💅 Serviço: ${servico} %0A` +
+  `📅 Data: ${dataFormatada} %0A` +
+  `⏰ Hora: ${hora}`;
+
+  let url = `https://wa.me/5511958561282?text=${mensagem}`;
+
+  window.open(url, "_blank");
+
+  document.querySelector("form").reset();
+}
+</script>
 
 <footer>
   <p>Contato: (11) 96826-0524</p>
 </footer>
+
+
 
 </body>
 </html>
