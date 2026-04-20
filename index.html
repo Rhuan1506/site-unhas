@@ -18,10 +18,14 @@ body {
 /* HEADER */
 header {
   background: linear-gradient(135deg, #e91e63, #ff4081);
-  text-align: center;
-  padding: 40px 20px;
+  padding: 20px 40px;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* LOGO */
@@ -34,7 +38,27 @@ header {
 /* SUB */
 .subtitulo {
   color: white;
-  font-size: 14px;
+  font-size: 30px;
+}
+
+/* REDES SOCIAIS */
+.redes {
+  display: flex;
+  gap: 40px;
+}
+
+.redes a {
+  color: white;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.092);
+  padding: 30px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.redes a:hover {
+  transform: scale(1.2);
+  color: #ffffff;
 }
 
 /* CONTAINER */
@@ -128,51 +152,42 @@ header {
   margin-top: 10px;
 }
 
+
 /* TABELA */
 table {
   width: 100%;
-  border-collapse: collapse;
-  background: white;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 300px 600px rgba(0,0,0,0.08);
-  font-size: 14px;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+  font-style: italic;
+  font-weight: 300px;
 }
 
-/* cabeçalho (se quiser adicionar depois) */
-table thead {
-  background: linear-gradient(135deg, #e91e63, #ff4081);
-  color: white;
-}
-
+/* células viram "cards" */
 td {
-  padding: 14px 16px;
-  border-bottom: 1px solid #f1f1f1;
-  transition: 0.2s;
+  background: rgba(0, 0, 0, 0.063);
+  padding: 16px 20px;
+  border: none;
 }
 
-/* efeito hover mais bonito */
-tr:hover td {
-  background: #ffe4ec;
-  transform: scale(1.01);
+/* primeira coluna */
+td:first-child {
+  border-radius: 12px 0 0 12px;
+  font-weight: 500;
+  color:#e91e63 ;
 }
 
-/* preço */
+/* última coluna (preço) */
 td:last-child {
+  border-radius: 0 12px 12px 0;
   text-align: right;
   color: #e91e63;
-  font-weight: 700;
-  font-size: 15px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
-/* zebra (linhas alternadas) */
-tr:nth-child(even) td {
-  background: #fafafa;
-}
-
-/* remove linha da última */
-tr:last-child td {
-  border-bottom: none;
+/* efeito hover REAL */
+tr:hover td {
+  background: #ffe4ec;
 }
 
 /* FORM */
@@ -227,13 +242,27 @@ footer {
 
 </style>
 </head>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <body>
 
 <header>
-  <img src="logo.png" class="logo" alt="Flavia Souza">
-  <p class="subtitulo">Especialista em unhas</p>
+  <div class="info">
+    <img src="logo.png." alt="Logo">
+    <p class="subtitulo">Especialista em unhas</p>
+  </div>
+
+  <div class="redes">
+    <a href="https://www.instagram.com/flaviasouza.nail?igsh=N3Rtc21memRkYWYx" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://wa.me/5511958561282" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </div>
 </header>
+
+
 
 <div class="container">
 
@@ -301,7 +330,6 @@ footer {
 
   </div>
 </section>
-</section>
 
 
 
@@ -322,7 +350,7 @@ footer {
 
 <!-- LOCALIZAÇÃO -->
 <section class="bloco">
-  <h2>📍 LOCALIZAÇÃO</h2>
+  <h2>📍 Endereço</h2>
 
   <p><strong>Rua Bandeirantes, 99</strong></p>
 
