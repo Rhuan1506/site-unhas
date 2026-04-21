@@ -12,11 +12,16 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+<<<<<<< HEAD
   background: linear-gradient(135deg, #ffe4ec, #f5f5f5);
+=======
+  background: linear-gradient(135deg, #ffe4ec, #d1a5c4);
+>>>>>>> 81d88ca (Finalização do site)
 }
 
 /* HEADER */
 header {
+<<<<<<< HEAD
   background: linear-gradient(135deg, #e91e63, #ff4081);
   padding: 20px 40px;
   border-bottom-left-radius: 30px;
@@ -56,11 +61,79 @@ header {
   padding: 30px;
   border-radius: 50%;
   transition: 0.3s;
+=======
+background: linear-gradient(135deg, #ffffff, #ca2f63);
+  padding: 5px 15px !important;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* BLOCO DA ESQUERDA */
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 60%; /* 🔥 impede empurrar tudo */
+}
+
+
+/* LOGO */
+.logo {
+  width: 230px !important;
+  height: auto;
+}
+
+/* SUBTÍTULO */
+.subtitulo {
+  margin-top: 5px;
+  font-size: 17px;
+  letter-spacing: 3px;
+  color: #000000;
+  font-weight: 400;
+  text-transform: uppercase;
+  opacity: 0.9;
+  position: relative;
+}
+
+/* LINHA DECORATIVA */
+.subtitulo::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: #000000;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+
+/* REDES */
+.redes {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-shrink: 0; /* 🔥 impede quebrar */
+}
+
+/* BOTÕES */
+.redes a {
+  padding: 30px;
+  font-size: 30px;
+  color: #ffffff;
+>>>>>>> 81d88ca (Finalização do site)
 }
 
 .redes a:hover {
   transform: scale(1.2);
+<<<<<<< HEAD
   color: #dd066a;
+=======
+  color: #ffffff;
+>>>>>>> 81d88ca (Finalização do site)
 }
 
 
@@ -83,10 +156,17 @@ header {
 
 .card {
   flex: 1;
+<<<<<<< HEAD
   background: white;
   padding: 15px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+=======
+  background: rgb(255, 255, 255);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(249, 246, 246, 0.604);
+>>>>>>> 81d88ca (Finalização do site)
   transition: 0.3s;
   position: relative;
 }
@@ -102,7 +182,11 @@ header {
 
 .card p {
   font-size: 13px;
+<<<<<<< HEAD
   color: #666;
+=======
+  color: #000000;
+>>>>>>> 81d88ca (Finalização do site)
   font-style: italic;
 }
 
@@ -134,7 +218,11 @@ header {
 
 /* CARD */
 .bloco {
+<<<<<<< HEAD
   background: rgba(255,255,255,0.8);
+=======
+  background: rgba(255, 255, 255, 0.8);
+>>>>>>> 81d88ca (Finalização do site)
   backdrop-filter: blur(10px);
   width: 600px;
   padding: 40px;
@@ -153,19 +241,27 @@ header {
 
 /* CARD INTERNO */
 .card {
+<<<<<<< HEAD
   background: white;
+=======
+  background: rgba(255, 255, 255, 0.918);
+>>>>>>> 81d88ca (Finalização do site)
   padding: 12px;
   border-radius: 10px;
   margin-top: 10px;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 81d88ca (Finalização do site)
 /* TABELA */
 table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0 12px;
   font-style: italic;
+<<<<<<< HEAD
   font-weight: 300px;
 }
 
@@ -184,12 +280,58 @@ td:first-child {
 }
 
 /* última coluna (preço) */
+=======
+}
+
+/* LINHA MAIS VENDIDA */
+.mais-vendido td {
+  background: linear-gradient(135deg, #fff0f5, #ffd6e7);
+  border: 2px solid #e91e63;
+  position: relative;
+}
+
+/* TEXTO MAIS VENDIDO */
+.mais-vendido td:first-child::before {
+  content: "🔥 Mais vendido";
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  background: #e91e63;
+  color: white;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 10px;
+}
+
+/* LINHAS COM TRANSIÇÃO */
+tr {
+  transition: 0.3s;
+}
+
+/* CÉLULAS = CARDS */
+td {
+  background: linear-gradient(135deg, #fff, #ffe4ec);
+  padding: 16px 20px;
+  border: none;
+  transition: 0.5 s;
+}
+
+/* PRIMEIRA COLUNA */
+td:first-child {
+  border-radius: 12px 0 0 12px;
+  font-weight: 500;
+  color: #e91e63;
+}
+
+/* PREÇO */
+>>>>>>> 81d88ca (Finalização do site)
 td:last-child {
   border-radius: 0 12px 12px 0;
   text-align: right;
   color: #e91e63;
   font-weight: bold;
   font-size: 18px;
+<<<<<<< HEAD
   font-style: italic;
 }
 
@@ -198,6 +340,28 @@ tr:hover td {
   background: #ffe4ec;
 }
 
+=======
+}
+
+/* HOVER PREMIUM */
+tr:hover td {
+  background: linear-gradient(135deg, #000000, #ff4081);
+  color: rgb(255, 255, 255);
+  transform: scale(1.02);
+}
+
+/* PREÇO NO HOVER */
+tr:hover td:last-child {
+  color: #fff;
+}
+
+/* SOMBRA SUAVE */
+tr:hover {
+  filter: drop-shadow(0 5px 10px rgb(255, 255, 255));
+}
+
+
+>>>>>>> 81d88ca (Finalização do site)
 /* FORM */
 form {
   display: flex;
@@ -208,14 +372,41 @@ form {
 input, select {
   padding: 10px;
   border-radius: 10px;
+<<<<<<< HEAD
   border: 1px solid #ddd;
+=======
+  border: 1px solid #d3356f;
+}
+
+/* destaque animado */
+@keyframes destaqueForm {
+  0% {
+    box-shadow: 0 0 0 rgba(233, 30, 99, 0);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(233, 30, 99, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(233, 30, 99, 0);
+  }
+}
+
+/* classe que ativa o efeito */
+.destacar {
+  animation: destaqueForm 10s ease;
+  border: 2px solid #e91e63;
+>>>>>>> 81d88ca (Finalização do site)
 }
 
 
 /* BOTÃO */
 button {
   background: linear-gradient(135deg, #e91e63, #ff4081);
+<<<<<<< HEAD
   color: white;
+=======
+  color: rgb(255, 255, 255);
+>>>>>>> 81d88ca (Finalização do site)
   border: none;
   padding: 12px;
   border-radius: 25px;
@@ -244,8 +435,15 @@ button:hover {
 /* FOOTER */
 footer {
   text-align: center;
+<<<<<<< HEAD
   color: #ff4081;
   padding: 20px;
+=======
+  color: #ffffff;
+  padding: 10px;
+  font-style: italic;
+  background-color: #f3538e;
+>>>>>>> 81d88ca (Finalização do site)
 }
 
 </style>
@@ -255,12 +453,21 @@ footer {
 
 <header>
   <div class="info">
+<<<<<<< HEAD
     <img src="logo.png." alt="Logo">
     <p class="subtitulo">Especialista em unhas</p>
   </div>
 
   <div class="redes">
     <a href="https://www.instagram.com/flaviasouza.nail?igsh=N3Rtc21memRkYWYx" target="_blank">
+=======
+    <img src="logo03.png" alt="Logo" class="logo">
+    <p class="subtitulo">ESPECIALISTA EM UNHAS</p>
+  </div>
+
+  <div class="redes">
+    <a href="https://www.instagram.com/flaviasouza.nail" target="_blank">
+>>>>>>> 81d88ca (Finalização do site)
       <i class="fab fa-instagram"></i>
     </a>
 
@@ -268,13 +475,43 @@ footer {
       <i class="fab fa-whatsapp"></i>
     </a>
 
+<<<<<<< HEAD
+=======
+    <a href="https://www.facebook.com/share/1DubCvsuKe/" target="_blank">
+      <i class="fab fa-facebook"></i>
+    </a>
+>>>>>>> 81d88ca (Finalização do site)
   </div>
 </header>
 
 
+<<<<<<< HEAD
 
 <div class="container">
 
+=======
+<div class="container">
+
+
+<!-- PREÇOS -->
+<section class="bloco">
+  <h2>💲PREÇOS</h2>
+
+  <table>
+    <tr><td>Alongamento F1</td><td>R$ 100,00</td></tr>
+    <tr class="mais-vendido">
+  <td>Manutenção</td>
+  <td>R$ 80,00</td>
+</tr>
+    <tr><td>Banho de Gel</td><td>R$ 75,00</td></tr>
+    <tr><td>Blindagem</td><td>R$ 50,00</td></tr>
+    <tr><td>Esmaltação em Gel</td><td>R$ 40,00</td></tr>
+    <tr><td>Remoção</td><td>R$ 20,00</td></tr>
+    <tr><td>Reposição</td><td>R$ 10,00</td></tr>
+  </table>
+</section>
+
+>>>>>>> 81d88ca (Finalização do site)
 <!-- SERVIÇOS -->
 <section class="bloco">
   <h2>✨ SERVIÇOS</h2>
@@ -340,6 +577,7 @@ footer {
   </div>
 </section>
 
+<<<<<<< HEAD
 
 
 <!-- PREÇOS -->
@@ -357,6 +595,8 @@ footer {
   </table>
 </section>
 
+=======
+>>>>>>> 81d88ca (Finalização do site)
 <!-- LOCALIZAÇÃO -->
 <section class="bloco">
   <h2>📍 Endereço</h2>
@@ -377,8 +617,15 @@ footer {
 </section>
 
 
+<<<<<<< HEAD
 <!-- FORM -->
 <section class="bloco">
+=======
+
+
+<!-- FORM -->
+<section class="bloco" id="form-agendamento">
+>>>>>>> 81d88ca (Finalização do site)
   <h2>📅 AGENDAR SEU DIA E SEU HORARIO</h2>
 
   <form onsubmit="enviarWhats(event)">
@@ -398,6 +645,7 @@ footer {
     </select>
 
     <input type="date" id="data" required>
+<<<<<<< HEAD
     <select id="hora" required>
   <option value="">Escolha o horário</option>
   <script>
@@ -429,6 +677,57 @@ gerarHorarios();
 
   </script>
 </select>
+=======
+
+    <select id="hora" required>
+      <option value="">Escolha o horário</option>
+
+      <script>
+        function gerarHorarios() {
+          let select = document.getElementById("hora");
+
+          let inicio = 17;
+          let fim = 22;
+
+          for (let h = inicio; h <= fim; h++) {
+            for (let m = 0; m < 60; m += 30) {
+
+              let hora = h.toString().padStart(2, "0");
+              let minuto = m.toString().padStart(2, "0");
+
+              let horario = `${hora}:${minuto}`;
+
+              let option = document.createElement("option");
+              option.value = horario;
+              option.textContent = horario;
+
+              select.appendChild(option);
+            }
+          }
+        }
+
+        gerarHorarios();
+
+        function selecionarServico(servico) {
+  let form = document.getElementById("form-agendamento");
+
+  // seleciona o serviço
+  document.getElementById("servico").value = servico;
+
+  // rola até o form
+  form.scrollIntoView({ behavior: "smooth" });
+
+  // adiciona destaque
+  form.classList.add("destacar");
+
+  // remove depois de 1.5s (pra poder repetir depois)
+  setTimeout(() => {
+    form.classList.remove("destacar");
+  }, 1500);
+}
+      </script>
+    </select>
+>>>>>>> 81d88ca (Finalização do site)
 
     <button type="submit">Agendar pelo WhatsApp</button>
 
