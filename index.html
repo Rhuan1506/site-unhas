@@ -200,19 +200,19 @@ footer {
 <button onclick="setServico('Blindagem')">Agendar</button>
 </div>
 
-<div class="card" onclick="setServico('Blindagem')">
+<div class="card" onclick="setServico('Esmaltação em Gel')">
 <h3>Esmaltação em Gel</h3>
-<button onclick="setServico('Blindagem')">Agendar</button>
+<button onclick="setServico('Esmaltação em Gel')">Agendar</button>
 </div>
 
-<div class="card" onclick="setServico('Blindagem')">
+<div class="card" onclick="setServico('Remoção')">
 <h3>Remoção</h3>
-<button onclick="setServico('Blindagem')">Agendar</button>
+<button onclick="setServico('Remoção')">Agendar</button>
 </div>
 
-<div class="card" onclick="setServico('Blindagem')">
+<div class="card" onclick="setServico('Reposição de Unha')">
 <h3>Reposição de unha</h3>
-<button onclick="setServico('Blindagem')">Agendar</button>
+<button onclick="setServico('Reposição de Unha')">Agendar</button>
 </div>
 
 </div>
@@ -234,7 +234,7 @@ footer {
 </section>
 
 <!-- AGENDAMENTO -->
-<section class="bloco">
+<section class="bloco" id="agendamento">
 <h2>Agendar horário</h2>
 
 <form onsubmit="enviar(event)">
@@ -296,7 +296,13 @@ for(let h=17; h<=22; h++){
 // selecionar serviço
 function setServico(valor){
   document.getElementById("servico").value = valor;
+
+  document.getElementById("agendamento").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
 }
+
 
 // enviar whatsapp
 function enviar(e){
