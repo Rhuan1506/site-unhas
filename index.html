@@ -3,322 +3,352 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Flavia Souza Nail Designer — especialista em alongamento de unhas, banho de gel, blindagem e esmaltação. Agende seu horário pelo WhatsApp.">
 <title>Flavia Souza | Nail Designer</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  background: linear-gradient(135deg, #ffe4ec, #d1a5c4);
-}
-
-/* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background: linear-gradient(135deg, #fff, #e91e63);
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-}
-
-.logo {
-  width: 180px;
-}
-
-.subtitulo {
-  font-size: 14px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #333;
-}
-
-.redes a {
-  color: white;
-  font-size: 22px;
-  margin-left: 10px;
-  transition: 0.3s;
-}
-
-.redes a:hover {
-  transform: scale(1.2);
-}
-
-/* CONTAINER */
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-}
-
-/* BLOCO */
-.bloco {
-  background: rgba(255,255,255,0.9);
-  width: 600px;
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-
-/* SERVIÇOS */
-.servicos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.card {
-  background: #fff;
-  padding: 15px;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card button {
-  margin-top: 10px;
-  background: #e91e63;
-  color: white;
-  border: none;
-  padding: 8px;
-  border-radius: 10px;
-}
-
-/* TABELA */
-table {
-  width: 100%;
-  border-spacing: 0 10px;
-}
-
-td {
-  background: #ffe4ec;
-  padding: 12px;
-  border-radius: 10px;
-}
-
-/* FORM */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input, select {
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid #e91e63;
-}
-
-button {
-  background: #e91e63;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 15px;
-  cursor: pointer;
-}
-
-/* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 15px;
-  border-radius: 50%;
-  font-size: 22px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  background: #e91e63;
-  color: white;
-  padding: 10px;
-  margin-top: 20px;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-  <div>
-    <img src="logo.png" class="logo" onerror="this.style.display='none'">
-    <p class="subtitulo">Especialista em Unhas</p>
-  </div>
+  <nav>
+    <a href="#topo" class="logo">
+      <span class="logo-icon"><i class="fa-solid fa-spa"></i></span>
+      <span class="logo-text">Flavia Souza<small>NAIL DESIGNER</small></span>
+    </a>
 
-  <div class="redes">
-    <a href="https://www.instagram.com/flaviasouza.nail" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://wa.me/5511958561282" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    <a href="https://www.facebook.com/share/1DubCvsuKe/" target="_blank"><i class="fab fa-facebook"></i></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#galeria">Galeria</a></li>
+      <li><a href="#precos">Preços</a></li>
+      <li><a href="#agendamento">Agendar</a></li>
+    </ul>
+
+    <div class="redes">
+      <a href="https://www.instagram.com/flaviasouza.nail" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/5511958561282" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.facebook.com/share/1DubCvsuKe/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+    </div>
+  </nav>
+
+  <div class="hero" id="topo">
+    <span class="hero-kicker"><i class="fa-solid fa-sparkles"></i> Unhas com técnica e delicadeza</span>
+    <h1>Suas unhas, <span>do seu jeito</span></h1>
+    <p class="hero-sub">Alongamento, blindagem e esmaltação em gel com acabamento impecável. Atendimento particular, cuidadoso e no seu tempo.</p>
+
+    <div class="hero-cta">
+      <a href="#agendamento"><button class="btn-primary">Agendar horário</button></a>
+      <a href="#servicos" class="btn-ghost">Ver serviços</a>
+    </div>
+
+    <div class="hero-stats">
+      <div><strong>+5</strong><span>anos de experiência</span></div>
+      <div><strong>+300</strong><span>clientes atendidas</span></div>
+      <div><strong>5.0</strong><span>avaliação média</span></div>
+    </div>
   </div>
 </header>
 
-<div class="container">
 
-<!-- SERVIÇOS -->
-<section class="bloco">
-<h2>Serviços</h2>
+<main>
 
-<div class="servicos">
+  <!-- SERVIÇOS -->
+  <section class="secao" id="servicos">
+    <div class="secao-heading">
+      <span class="kicker"><i class="fa-solid fa-hand-sparkles"></i> Serviços</span>
+      <h2>O que eu faço por você</h2>
+      <p>Cada procedimento é pensado para durar, proteger a unha natural e deixar o resultado impecável.</p>
+    </div>
 
-<div class="card" onclick="setServico('Alongamento F1')">
-<h3>Alongamento F1</h3>
-<button onclick="setServico('Alongamento F1')">Agendar</button>
-</div>
+    <div class="servicos-grid">
 
-<div class="card" onclick="setServico('Manutenção')">
-<h3>Manutenção</h3>
-<button onclick="setServico('Manutenção')">Agendar</button>
-</div>
+      <div class="servico-card" onclick="setServico('Alongamento F1')">
+        <div class="servico-icone"><i class="fa-solid fa-hand-back-fist"></i></div>
+        <h3>Alongamento F1</h3>
+        <p>Molde em fibra com formato natural e resistente, ideal para quem quer comprimento sem exagero.</p>
+        <button onclick="event.stopPropagation(); setServico('Alongamento F1')">Agendar <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
 
-<div class="card" onclick="setServico('Banho de Gel')">
-<h3>Banho de Gel</h3>
-<button onclick="setServico('Banho de Gel')">Agendar</button>
-</div>
+      <div class="servico-card" onclick="setServico('Manutenção')">
+        <div class="servico-icone"><i class="fa-solid fa-arrows-rotate"></i></div>
+        <h3>Manutenção</h3>
+        <p>Reforço e ajuste do alongamento já feito, mantendo as unhas sempre em dia.</p>
+        <button onclick="event.stopPropagation(); setServico('Manutenção')">Agendar <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
 
-<div class="card" onclick="setServico('Blindagem')">
-<h3>Blindagem</h3>
-<button onclick="setServico('Blindagem')">Agendar</button>
-</div>
+      <div class="servico-card" onclick="setServico('Banho de Gel')">
+        <div class="servico-icone"><i class="fa-solid fa-droplet"></i></div>
+        <h3>Banho de Gel</h3>
+        <p>Camada protetora de gel sobre a unha natural, com brilho e durabilidade prolongada.</p>
+        <button onclick="event.stopPropagation(); setServico('Banho de Gel')">Agendar <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
 
-<div class="card" onclick="setServico('Esmaltação em Gel')">
-<h3>Esmaltação em Gel</h3>
-<button onclick="setServico('Esmaltação em Gel')">Agendar</button>
-</div>
+      <div class="servico-card" onclick="setServico('Blindagem')">
+        <div class="servico-icone"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Blindagem</h3>
+        <p>Fortalecimento da unha natural, prevenindo quebras e lascas no dia a dia.</p>
+        <button onclick="event.stopPropagation(); setServico('Blindagem')">Agendar <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
 
-<div class="card" onclick="setServico('Remoção')">
-<h3>Remoção</h3>
-<button onclick="setServico('Remoção')">Agendar</button>
-</div>
+      <div class="servico-card" onclick="setServico('Esmaltação em Gel')">
+        <div class="servico-icone"><i class="fa-solid fa-paintbrush"></i></div>
+        <h3>Esmaltação em Gel</h3>
+        <p>Cor uniforme e brilho intenso, com secagem em cabine e duração de semanas.</p>
+        <button onclick="event.stopPropagation(); setServico('Esmaltação em Gel')">Agendar <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
 
-<div class="card" onclick="setServico('Reposição de Unha')">
-<h3>Reposição de unha</h3>
-<button onclick="setServico('Reposição de Unha')">Agendar</button>
-</div>
+      <div class="servico-card" onclick="setServico('Remoção')">
+        <div class="servico-icone"><i class="fa-solid fa-eraser"></i></div>
+        <h3>Remoção</h3>
+        <p>Retirada segura de esmaltação em gel ou alongamento, sem agredir a unha natural.</p>
+        <button onclick="event.stopPropagation(); setServico('Remoção')">Agendar <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
 
-</div>
+      <div class="servico-card" onclick="setServico('Reposição de Unha')">
+        <div class="servico-icone"><i class="fa-solid fa-puzzle-piece"></i></div>
+        <h3>Reposição de Unha</h3>
+        <p>Conserto pontual de uma ou mais unhas quebradas, sem precisar refazer tudo.</p>
+        <button onclick="event.stopPropagation(); setServico('Reposição de Unha')">Agendar <i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SOBRE -->
+  <section class="secao sobre-secao" id="sobre">
+    <div class="sobre-grid">
+
+      <div class="sobre-texto">
+        <span class="kicker"><i class="fa-solid fa-user"></i> Sobre mim</span>
+        <h2>Prazer, eu sou a Flavia</h2>
+        <p>Nail designer apaixonada por transformar unhas em detalhes de autoestima. Trabalho com técnica, higiene rigorosa e materiais de qualidade, buscando sempre o equilíbrio entre beleza e saúde da unha natural.</p>
+        <p>Cada atendimento é pensado nos mínimos detalhes: do formato ideal para sua mão até o acabamento final, para que o resultado dure e você se sinta confiante todos os dias.</p>
+
+        <div class="sobre-badges">
+          <div class="badge"><i class="fa-solid fa-certificate"></i> Materiais de qualidade</div>
+          <div class="badge"><i class="fa-solid fa-broom"></i> Higiene rigorosa</div>
+          <div class="badge"><i class="fa-solid fa-heart"></i> Atendimento personalizado</div>
+        </div>
+      </div>
+
+      <div class="sobre-cards">
+        <div class="mini-card">
+          <i class="fa-solid fa-clock"></i>
+          <h4>Pontualidade</h4>
+          <p>Horários marcados e respeitados, sem espera.</p>
+        </div>
+        <div class="mini-card">
+          <i class="fa-solid fa-gem"></i>
+          <h4>Acabamento</h4>
+          <p>Detalhes finos que fazem toda a diferença no resultado.</p>
+        </div>
+        <div class="mini-card">
+          <i class="fa-solid fa-comments"></i>
+          <h4>Conversa aberta</h4>
+          <p>Escuto o que você quer antes de sugerir o melhor formato.</p>
+        </div>
+        <div class="mini-card">
+          <i class="fa-solid fa-house"></i>
+          <h4>Ambiente acolhedor</h4>
+          <p>Espaço tranquilo, pensado para o seu conforto.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+ <!-- GALERIA -->
+<section class="secao" id="galeria">
+  <div class="secao-heading">
+    <span class="kicker"><i class="fa-solid fa-images"></i> Galeria</span>
+    <h2>Alguns trabalhos</h2>
+    <p>Uma amostra dos estilos e formatos que já fiz. Envie sua referência no agendamento!</p>
+  </div>
+
+  <div class="galeria-grid">
+    <div class="galeria-item">
+      <img src="https://images.unsplash.com/photo-1659391542239-9648f307c0b1?w=500&h=500&fit=crop&auto=format&q=80" alt="Unhas pintadas com esmaltação em gel" loading="lazy">
+    </div>
+    <div class="galeria-item">
+      <img src="https://images.unsplash.com/photo-1772322586754-34c9e6f5be6f?w=500&h=500&fit=crop&auto=format&q=80" alt="Alongamento com francesinha e glitter" loading="lazy">
+    </div>
+    <div class="galeria-item">
+      <img src="https://images.unsplash.com/photo-1610992015762-45dca7fa3a85?w=500&h=500&fit=crop&auto=format&q=80" alt="Manicure em tom rosa claro" loading="lazy">
+    </div>
+    <div class="galeria-item">
+      <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?w=500&h=500&fit=crop&auto=format&q=80" alt="Unhas com glitter prateado" loading="lazy">
+    </div>
+    <div class="galeria-item">
+      <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=500&fit=crop&auto=format&q=80" alt="Alongamento com estampa exclusiva" loading="lazy">
+    </div>
+    <div class="galeria-item">
+      <img src="https://images.unsplash.com/photo-1630843599725-32ead7671867?w=500&h=500&fit=crop&auto=format&q=80" alt="Manicure branca clássica" loading="lazy">
+    </div>
+    <div class="galeria-item">
+      <img src="https://images.unsplash.com/photo-1612887390768-fb02affea7a6?w=500&h=500&fit=crop&auto=format&q=80" alt="Manicure rosa sobre tecido claro" loading="lazy">
+    </div>
+    <div class="galeria-item">
+      <img src="https://images.unsplash.com/photo-1571290274554-6a2eaa771e5f?w=500&h=500&fit=crop&auto=format&q=80" alt="Unhas com acabamento natural" loading="lazy">
+    </div>
+  </div>
+  <p class="galeria-nota">* Fotos ilustrativas de banco de imagens — substitua pelos links dos seus trabalhos reais assim que tiver.</p>
 </section>
 
-<!-- PREÇOS -->
-<section class="bloco">
-<h2>Preços</h2>
+  <!-- PREÇOS -->
+  <section class="secao" id="precos">
+    <div class="secao-heading">
+      <span class="kicker"><i class="fa-solid fa-tag"></i> Valores</span>
+      <h2>Tabela de preços</h2>
+      <p>Valores de referência. Casos específicos podem ter ajuste combinado no agendamento.</p>
+    </div>
 
-<table>
-<tr><td>Alongamento F1</td><td>R$ 100,00</td></tr>
-<tr><td>Manutenção</td><td>R$ 80,00</td></tr>
-<tr><td>Banho de Gel</td><td>R$ 75,00</td></tr>
-<tr><td>Blindagem</td><td>R$ 50,00</td></tr>
-<tr><td>Esmaltação em Gel</td><td>R$ 40,00</td></tr>
-<tr><td>Remoção</td><td>R$ 20,00</td></tr>
-<tr><td>Reposição de unha</td><td>R$ 10,00</td></tr>
-</table>
-</section>
-
-<!-- AGENDAMENTO -->
-<section class="bloco" id="agendamento">
-<h2>Agendar horário</h2>
-
-<form onsubmit="enviar(event)">
-<input type="text" id="nome" placeholder="Nome" required>
-<input type="tel" id="telefone" placeholder="Telefone" required>
-
-<select id="servico">
-<option>Selecione um serviço</option>
-
-<option>Alongamento Molde F1</option>
-
-<option>Manutenção</option>
-
-<option>Banho de gel</option>
-
-<option>Blindagem</option>
-
-<option>Esmaltação em gel</option>
-
-<option>Remoção</option>
-
-<option>Reposição de Unha</option>
-</select>
-
+    <div class="precos-tabela">
+      <div class="preco-linha">
+        <span class="preco-nome"><i class="fa-solid fa-hand-back-fist"></i> Alongamento F1</span>
+        <span class="preco-valor">R$ 100,00</span>
+      </div>
+      <div class="preco-linha">
+        <span class="preco-nome"><i class="fa-solid fa-arrows-rotate"></i> Manutenção</span>
+        <span class="preco-valor">R$ 80,00</span>
+      </div>
+      <div class="preco-linha">
+        <span class="preco-nome"><i class="fa-solid fa-droplet"></i> Banho de Gel</span>
+        <span class="preco-valor">R$ 75,00</span>
+      </div>
+      <div class="preco-linha">
+        <span class="preco-nome"><i class="fa-solid fa-shield-halved"></i> Blindagem</span>
+        <span class="preco-valor">R$ 50,00</span>
+      </div>
+      <div class="preco-linha">
+        <span class="preco-nome"><i class="fa-solid fa-paintbrush"></i> Esmaltação em Gel</span>
+        <span class="preco-valor">R$ 40,00</span>
+      </div>
+      <div class="preco-linha">
+        <span class="preco-nome"><i class="fa-solid fa-eraser"></i> Remoção</span>
+        <span class="preco-valor">R$ 20,00</span>
+      </div>
+      <div class="preco-linha">
+        <span class="preco-nome"><i class="fa-solid fa-puzzle-piece"></i> Reposição de Unha</span>
+        <span class="preco-valor">R$ 10,00</span>
+      </div>
+    </div>
+  </section>
 
 
+  <!-- AGENDAMENTO -->
+  <section class="secao agendamento-secao" id="agendamento">
+    <div class="agendamento-card">
+
+      <div class="agendamento-info">
+        <span class="kicker"><i class="fa-solid fa-calendar-check"></i> Agendamento</span>
+        <h2>Vamos marcar seu horário?</h2>
+        <p>Preencha os dados abaixo e finalize direto no WhatsApp. Rápido, sem burocracia.</p>
+
+        <div class="info-item"><i class="fa-solid fa-location-dot"></i> Atendimento particular</div>
+        <div class="info-item"><i class="fa-solid fa-clock"></i> Terça a sábado, 17h às 22h</div>
+        <div class="info-item"><i class="fa-brands fa-whatsapp"></i> (11) 95856-1282</div>
+      </div>
+
+      <form onsubmit="enviar(event)">
+        <label>Nome
+          <input type="text" id="nome" placeholder="Seu nome completo" required>
+        </label>
+
+        <label>Telefone
+          <input type="tel" id="telefone" placeholder="(11) 90000-0000" required>
+        </label>
+
+        <label>Serviço
+          <select id="servico" required>
+            <option value="" selected disabled>Selecione um serviço</option>
+            <option>Alongamento F1</option>
+            <option>Manutenção</option>
+            <option>Banho de Gel</option>
+            <option>Blindagem</option>
+            <option>Esmaltação em Gel</option>
+            <option>Remoção</option>
+            <option>Reposição de Unha</option>
+          </select>
+        </label>
+
+        <div class="form-row">
+          <label>Data
+            <input type="date" id="data" required>
+          </label>
+
+          <label>Horário
+            <select id="hora" required></select>
+          </label>
+        </div>
+
+        <button type="submit" class="btn-primary btn-full">
+          <i class="fab fa-whatsapp"></i> Enviar no WhatsApp
+        </button>
+      </form>
+
+    </div>
+  </section>
+
+</main>
 
 
-<input type="date" id="data">
-
-<select id="hora"></select>
-
-<button type="submit">Enviar no WhatsApp</button>
-</form>
-
-</section>
-
-</div>
-
-<a class="whatsapp" href="https://wa.me/5511958561282">💬</a>
-
+<!-- FOOTER -->
 <footer>
-<p>Contato: (11) 96826-0524</p>
+  <div class="footer-top">
+
+    <div class="footer-brand">
+      <span class="logo-text footer-logo">Flavia Souza<small>NAIL DESIGNER</small></span>
+      <p>Unhas com técnica, cuidado e acabamento que você merece. Agende seu horário e venha experimentar.</p>
+      <div class="redes footer-redes">
+        <a href="https://www.instagram.com/flaviasouza.nail" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/5511958561282" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/share/1DubCvsuKe/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4><i class="fa-solid fa-compass"></i> Navegação</h4>
+      <ul>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#precos">Preços</a></li>
+        <li><a href="#agendamento">Agendar</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4><i class="fa-solid fa-phone"></i> Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/5511958561282" target="_blank"><i class="fab fa-whatsapp"></i> (11) 95856-1282</a></li>
+        <li><a href="https://www.instagram.com/flaviasouza.nail" target="_blank"><i class="fab fa-instagram"></i> @flaviasouza.nail</a></li>
+        <li><i class="fa-solid fa-clock"></i> Ter. a Sáb. — 17h às 22h</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Flavia Souza Nail Designer — Todos os direitos reservados.</span>
+    <a href="#topo" class="back-to-top">Voltar ao topo <i class="fa-solid fa-arrow-up"></i></a>
+  </div>
 </footer>
 
-<script>
+<a class="whatsapp-flutuante" href="https://wa.me/5511958561282" target="_blank" aria-label="Fale no WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
 
-// horários
-let hora = document.getElementById("hora");
-for(let h=17; h<=22; h++){
-  for(let m=0; m<60; m+=30){
-    let opt = document.createElement("option");
-    opt.value = `${h}:${m==0?'00':m}`;
-    opt.textContent = `${h}:${m==0?'00':m}`;
-    hora.appendChild(opt);
-  }
-}
-
-// selecionar serviço
-function setServico(valor){
-  document.getElementById("servico").value = valor;
-
-  document.getElementById("agendamento").scrollIntoView({
-    behavior: "smooth",
-    block: "start"
-  });
-}
-
-
-// enviar whatsapp
-function enviar(e){
-  e.preventDefault();
-
-  let nome = document.getElementById("nome").value;
-  let servico = document.getElementById("servico").value;
-  let data = document.getElementById("data").value;
-  let hora = document.getElementById("hora").value;
-
-  let msg = `Olá, me chamo ${nome}. Quero agendar ${servico} no dia ${data} às ${hora}`;
-
-  window.open(`https://wa.me/5511958561282?text=${encodeURIComponent(msg)}`);
-}
-
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
